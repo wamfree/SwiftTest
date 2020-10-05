@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6SZ-uT-kts">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sd5-uB-1Wu">
+            <objects>
+                <tabBarController id="6SZ-uT-kts" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="boc-M1-d3A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.80000000000000004" green="0.29411764709999999" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="L4q-87-cSh" kind="relationship" relationship="viewControllers" id="E9T-02-izP"/>
+                        <segue destination="9oR-ps-wcK" kind="relationship" relationship="viewControllers" id="wL8-ef-ctr"/>
+                        <segue destination="GZp-yk-Bqx" kind="relationship" relationship="viewControllers" id="zrp-a3-NVr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Bm-II-OQe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1014" y="-18"/>
+        </scene>
+        <!--Your Drinks-->
+        <scene sceneID="5DM-4l-5z9">
+            <objects>
+                <navigationController id="L4q-87-cSh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Your Drinks" image="person.circle" catalog="system" selectedImage="person.circle" id="A4j-L2-b1o">
+                        <color key="badgeColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="mYO-9v-Nzk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.80000000000000004" green="0.29411764709999999" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TRL-t1-udo" kind="relationship" relationship="rootViewController" id="rXC-xG-cCr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uUh-Fk-TJV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1397" y="656"/>
+        </scene>
+        <!--Your Drinks-->
+        <scene sceneID="cKl-FH-S9i">
+            <objects>
+                <viewController id="TRL-t1-udo" customClass="HomePageViewController" customModule="YourDrinks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleAspectFill" id="YRL-FM-tyW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxU-DU-hml">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DrinkImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ona-eY-Mwz">
+                                        <rect key="frame" x="41.5" y="109" width="331" height="331"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ona-eY-Mwz" secondAttribute="height" multiplier="1:1" id="sZk-S3-vWK"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don’t have any drinks so far. Tap the plus button to add one" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWf-Tp-5t2">
+                                        <rect key="frame" x="58.5" y="473" width="297" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="297" id="8rn-ai-FKM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="OWf-Tp-5t2" firstAttribute="centerX" secondItem="Ona-eY-Mwz" secondAttribute="centerX" id="EyI-TX-SYz"/>
+                                    <constraint firstItem="Ona-eY-Mwz" firstAttribute="width" secondItem="wxU-DU-hml" secondAttribute="width" multiplier="0.8" id="s5w-I3-aqh"/>
+                                    <constraint firstItem="OWf-Tp-5t2" firstAttribute="top" secondItem="Ona-eY-Mwz" secondAttribute="bottom" constant="33" id="sOV-Pq-UEh"/>
+                                    <constraint firstItem="Ona-eY-Mwz" firstAttribute="centerX" secondItem="wxU-DU-hml" secondAttribute="centerX" id="wBi-W7-Rb4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="loj-B2-IZK"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wxU-DU-hml" firstAttribute="bottom" secondItem="loj-B2-IZK" secondAttribute="bottom" id="Ajy-A7-uJl"/>
+                            <constraint firstItem="wxU-DU-hml" firstAttribute="trailing" secondItem="YRL-FM-tyW" secondAttribute="trailing" id="KyP-u5-UO2"/>
+                            <constraint firstItem="wxU-DU-hml" firstAttribute="centerX" secondItem="YRL-FM-tyW" secondAttribute="centerX" id="O2R-uF-Kuh"/>
+                            <constraint firstItem="wxU-DU-hml" firstAttribute="top" secondItem="loj-B2-IZK" secondAttribute="top" id="i5K-Xf-IxT"/>
+                            <constraint firstItem="Ona-eY-Mwz" firstAttribute="top" secondItem="wxU-DU-hml" secondAttribute="top" constant="109" id="j7o-Xw-aI5"/>
+                            <constraint firstItem="wxU-DU-hml" firstAttribute="leading" secondItem="YRL-FM-tyW" secondAttribute="leading" id="v1p-Fa-b4r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Drinks" id="GBw-50-184">
+                        <barButtonItem key="rightBarButtonItem" title="AddButton" image="plus.circle" catalog="system" id="NOL-mX-DZa">
+                            <color key="tintColor" red="0.80000000000000004" green="0.29411764709999999" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="AddButton:" destination="TRL-t1-udo" id="wNm-zT-Edt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mainContainer" destination="wxU-DU-hml" id="cJA-Gc-5A7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y1t-Fz-vtQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1381.1594202898552" y="1356.6964285714284"/>
+        </scene>
+        <!--Preferences-->
+        <scene sceneID="Zlo-gs-jD3">
+            <objects>
+                <viewController id="G6f-Yy-9FV" customClass="PreferencesViewController" customModule="YourDrinks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n1Z-iX-8yA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mWh-1W-J6d"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Preferences" id="ura-vY-z4F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gB-7e-bST" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="1357"/>
+        </scene>
+        <!--Suggestions-->
+        <scene sceneID="hOA-NW-os3">
+            <objects>
+                <viewController id="IVe-qe-lkh" customClass="SuggestionsViewController" customModule="YourDrinks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cuc-wW-Bl7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gch-m9-GJf">
+                                <rect key="frame" x="184" y="405" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTabButton" destination="IVe-qe-lkh" eventType="touchUpInside" id="aPa-2a-fx8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bcp-Eu-eW5"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="gch-m9-GJf" firstAttribute="centerX" secondItem="cuc-wW-Bl7" secondAttribute="centerX" id="lhU-Ao-QUs"/>
+                            <constraint firstItem="gch-m9-GJf" firstAttribute="top" secondItem="bcp-Eu-eW5" secondAttribute="top" constant="265" id="uLT-KZ-j2A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Suggestions" id="Bsn-Er-2hu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIz-SQ-4IJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="1356.6964285714284"/>
+        </scene>
+        <!--Preferences-->
+        <scene sceneID="0xK-V1-lMD">
+            <objects>
+                <navigationController id="GZp-yk-Bqx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Preferences" image="gear" catalog="system" id="94g-NT-aXe"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="bIK-Ak-IC8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="G6f-Yy-9FV" kind="relationship" relationship="rootViewController" id="766-de-l0g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4N-WQ-X90" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9" y="656"/>
+        </scene>
+        <!--Suggestions-->
+        <scene sceneID="xrH-sz-fyq">
+            <objects>
+                <navigationController id="9oR-ps-wcK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Suggestions" image="wand.and.stars" catalog="system" id="8Qe-BS-oci"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="pIX-7L-1zg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="IVe-qe-lkh" kind="relationship" relationship="rootViewController" id="cnb-eX-gut"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hga-dC-TkZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="656"/>
+        </scene>
+        <!--Your Drinks-->
+        <scene sceneID="pJU-0X-TKd">
+            <objects>
+                <viewController id="lCX-W1-aUs" customClass="HomePageViewController" customModule="YourDrinks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleAspectFill" id="Rl9-kI-KqK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WUH-B3-QS6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ccl-Td-o9d"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Drinks" id="K3q-0C-Mds">
+                        <barButtonItem key="rightBarButtonItem" title="AddButton" image="plus.circle" catalog="system" id="7Hn-tg-ihh">
+                            <color key="tintColor" red="0.80000000000000004" green="0.29411764709999999" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="AddButton:" destination="lCX-W1-aUs" id="Stu-rQ-QZS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L0P-gK-yyM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1381.1594202898552" y="2056.4732142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DrinkImage" width="285" height="307"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
+        <image name="wand.and.stars" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
